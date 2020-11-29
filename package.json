@@ -26,12 +26,6 @@
     "eject": "react-scripts eject",
     "precommit" : "lint-staged"
   },
-  "lint-staged" : {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -48,6 +42,12 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "lint-staged" : {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --write",
+      "git add ."
     ]
   },
   "devDependencies": {
