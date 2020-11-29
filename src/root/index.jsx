@@ -3,11 +3,11 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../redux/store';
 import App from '../container/App';
-    console.log( "messy"    )        ;
+    console.log(      "messy"    )        ;
 export default () => (
   <Provider store={store}>
-    <Router>
-    <App />
+<Router>
+<App />
     </Router>
   </Provider>
 );
