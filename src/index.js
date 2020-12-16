@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './root';
+import './style.scss';
+import './utils/language/i18n';
 import reportWebVitals from './reportWebVitals';
+import './@fake-api';
 
 ReactDOM.render(
   <React.StrictMode>

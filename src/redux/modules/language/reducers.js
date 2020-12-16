@@ -7,7 +7,7 @@ const initialState = {
 const map = {
   [types.CHANGE_LANGUAGE]: (state, { value }) => {
     localStorage.setItem('language', value);
-    return ({ ...state, language: value });
+    return { ...state, language: value };
   }
 };
 

@@ -1,0 +1,108 @@
+@font-face {
+      font-family: "Poppins";
+      src: url("./assets//fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+      font-family: "Monument";
+      src: url("./assets//fonts/Monument-Ultrabold.otf");
+      font-weight: 900;
+}
+
+@font-face {
+      font-family: "Monument";
+      src: url("./assets//fonts/Monument-Regular.otf");
+}
+
+
+:root {
+      --bg: 255, 255, 255;
+      --color: 15, 15, 19;
+}
+
+*,
+::after,
+::before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      font-family: "Poppins", sans-serif;
+}
+
+::selection {
+      background-color: rgba(var(--color), .2);
+}
+
+@media screen and (min-width: 768px) {
+      * {
+            // cursor: none;
+      }
+}
+
+
+html {
+      font-family: Raleway, Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+      font-size: 16px;
+      word-spacing: 1px;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+}
+
+body,
+html {
+      width: 100%;
+      background: rgba(var(--bg), 1);
+}
+
+img {
+      display: block;
+      user-select: none;
+}
+
+li {
+      list-style: none;
+}
+
+
+.demo2 {
+      position: relative;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      width: 100%;
+      height: auto;
+}
+
+.demo2 .content__img {
+      width: 50%;
+      height: auto;
+      opacity: 1;
+      transition: all 0.5s;
+      margin: 0 auto;
+      // display: none;
+}
+
+.demo2 .link {
+      display: flex;
+      width: 100%;
+      height: 100%;
+
+      &:hover> .content__img {
+            opacity: 0;
+            transition: all 0.5s;
+      }
+}
+
+canvas {
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 99;
+      pointer-events: none;
+}
