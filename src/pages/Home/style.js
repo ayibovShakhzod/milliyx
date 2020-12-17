@@ -8,7 +8,7 @@ export const ContainerHome = styled(Container)`
 `;
 
 export const ImgCont = styled.div`
-  width: 100%;
+  width: 60%;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -16,26 +16,17 @@ export const ImgCont = styled.div`
   align-items: center;
   position: relative;
   z-index: 1;
+  margin-top: 50px;
 `;
 export const Box1 = styled.div`
-  width: 65%;
-  height: 350px;
+  width: 100%;
+  height: 250px;
   position: relative;
   display: flex;
+  align-items: flex-start;
   margin: 0 0 100px 0;
+  background-color: rgba(var(--color), 1);
 `;
-export const ImgBlur = styled.img`
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: 0;
-  top: 15px;
-  left: 0;
-  object-fit: cover;
-  transition: all 0.2s ease 0s;
-  filter: blur(30px) brightness(100%) saturate(200%);
-`;
-
 export const ImgBig = styled.img`
   width: 100%;
   height: auto;
@@ -49,23 +40,24 @@ export const ImgBig = styled.img`
 `;
 
 export const Title = styled.h2`
-  position: absolute;
-  width: 100%;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(var(--bg), 1);
   color: transparent;
-  text-align: center;
+  text-align: right;
   letter-spacing: 18px;
   line-height: 150%;
+  position: absolute;
   height: 100%;
+  width: 100%;
+  right: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   z-index: 100;
   user-select: none;
   font-family: Monument, sans-serif !important;
   z-index: 1;
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 400;
 `;
 

@@ -2,7 +2,7 @@ export const slider1 = [
   {
     id: 1,
     title: 'Techno-news',
-    img: 'https://images.unsplash.com/photo-1553949345-eb786bb3f7ba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
+    img: 'https://images.unsplash.com/photo-1599332470353-a2e7275e3d63?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80',
     text: 'Newsletter website'
   },
   {

@@ -9,10 +9,9 @@ import {
   SubBox1,
   SubBox2,
   Item,
-  ImgBlur,
   BackText
 } from './style';
-import Slider from '../../components/Sliders';
+import MainSection from '../../components/MainSection';
 import imgBig from '../../assets/img/img4.jpg';
 import img1 from '../../assets/img/img13.jpg';
 import img2 from '../../assets/img/img2.jpg';
@@ -20,13 +19,16 @@ import img3 from '../../assets/img/back2.jpg';
 
 export default () => (
   <ContainerHome>
-    <Slider />
+    <MainSection />
     <Box1>
       <ImgCont>
         <ImgBig src={imgBig} />
-        <Title>We create experiences</Title>
       </ImgCont>
-      <ImgBlur src={imgBig} />
+      <Title>
+        We create
+        <br />
+        experiences
+      </Title>
     </Box1>
     <Box2>
       <SubBox1>
