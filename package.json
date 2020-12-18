@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.0",
     "axios-mock-adapter": "^1.19.0",
+    "framer-motion": "^3.0.0",
     "gsap": "^3.5.1",
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",

@@ -12,6 +12,7 @@ import {
 import Home from '../../pages/Home';
 import About from '../../pages/About';
 import Nav from '../../components/Nav';
+import SmoothScroll from '../SmoothScroll';
 
 export default () => {
   // const dispatch = useDispatch();
@@ -37,7 +38,7 @@ export default () => {
   }, []);
 
   return (
-    <>
+    <SmoothScroll>
       <Nav />
       <Switch>
         <Route path="/" exact>
@@ -53,6 +54,6 @@ export default () => {
           <p>Not found</p>
         </Route>
       </Switch>
-    </>
+    </SmoothScroll>
   );
 };

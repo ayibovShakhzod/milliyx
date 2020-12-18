@@ -58,6 +58,10 @@ html {
       background: rgba(var(--bg), 1);
 }
 
+body::-webkit-scrollbar {
+      width:0;
+}
+
 img {
       display: block;
       user-select: none;
@@ -92,7 +96,7 @@ li {
       width: 100%;
       height: 100%;
 
-      &:hover> .content__img {
+      &:hover>.content__img {
             opacity: 0;
             transition: all 0.5s;
       }
@@ -105,4 +109,11 @@ canvas {
       left: 0px;
       z-index: 99;
       pointer-events: none;
+}
+
+.viewport {
+      margin: 0 0 0 0;
+      width: 100vw;
+      overflow-x: hidden;
+      position: fixed;
 }

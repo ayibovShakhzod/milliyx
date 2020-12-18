@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { Container } from '../../style/style';
 
 export const ContainerHome = styled(Container)`
@@ -16,7 +17,6 @@ export const ImgCont = styled.div`
   align-items: center;
   position: relative;
   z-index: 1;
-  margin-top: 50px;
 `;
 export const Box1 = styled.div`
   width: 100%;
@@ -25,9 +25,9 @@ export const Box1 = styled.div`
   display: flex;
   align-items: flex-start;
   margin: 0 0 100px 0;
-  background-color: rgba(var(--color), 1);
+  /* background-color: rgba(var(--color), 1); */
 `;
-export const ImgBig = styled.img`
+export const ImgBig = styled(motion.img)`
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -46,10 +46,9 @@ export const Title = styled.h2`
   text-align: right;
   letter-spacing: 18px;
   line-height: 150%;
-  position: absolute;
   height: 100%;
-  width: 100%;
-  right: 0;
+  width: 40%;
+  right: 24px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -59,6 +58,7 @@ export const Title = styled.h2`
   z-index: 1;
   font-size: 2rem;
   font-weight: 400;
+  background-color: rgba(var(--color), 1);
 `;
 
 export const Box2 = styled.div`

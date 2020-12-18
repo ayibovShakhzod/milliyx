@@ -16,7 +16,7 @@ export const BackTitle = styled.h3`
   position: absolute;
   font-size: 20rem;
   width: 100%;
-  bottom: 0%;
+  top: 0%;
   left: -15%;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(var(--color), 0.2);
