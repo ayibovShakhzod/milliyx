@@ -23,13 +23,7 @@ export default class SmoothScroll extends React.Component {
   }
 
   onScroll = () => {
-    
-    // let topx = window.pageYOffset
-    // this.setState({offset:((topx - this.state.offset) * 0.05)+this.state.offset});
-    // var scroll = "translateY(-" + this.state.offset + "px) translateZ(0)"
-    // this.viewport.style.transform = scroll
-
-    TweenLite.to(this.viewport, 1, {
+    TweenLite.to(this.viewport, 1.2, {
       y: -window.pageYOffset,
       ease: Power1.easeOut
     });

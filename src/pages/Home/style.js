@@ -33,10 +33,8 @@ export const ImgBig = styled(motion.img)`
   object-fit: cover;
   transition: all 0.2s ease;
   position: relative;
-  transform: scale(1);
-  &:hover {
-    transition: all 0.2s ease;
-  }
+  backface-visibility: hidden;
+  transition: transform  1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 `;
 
 export const Title = styled.h2`
@@ -103,10 +101,31 @@ SubBox2.Item2 = styled.div`
   z-index: 1;
   margin-top: 0;
 `;
-
-Box2.Img = styled.img`
+Box2.ImgCont = styled.div`
+  position: relative;
   width: 100%;
-  display: block;
+  height: auto;
+  overflow: hidden;
+`;
+Box2.Img = styled(motion.img)`
+  position: relative;
+  width: 100%;
+  z-index: 200;
+  opacity: .8;
+  filter: saturate(4.5);
+  backface-visibility: hidden;
+  transition: transform  .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+`;
+Box2.ImgSecond = styled(motion.img)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .2;
+  width: 100%;
+  z-index: 300;
+  filter: grayscale(1);
+  backface-visibility: hidden;
+  transition: transform  1s ease-out;
 `;
 
 // Box2.Title = styled.h3`
@@ -115,6 +134,7 @@ Box2.Img = styled.img`
 Box2.Text = styled.p`
   font-size: 0.85rem;
   padding-left: 5px;
+  position: relative;
 `;
 
 Box2.Title2 = styled.h3`
@@ -126,15 +146,13 @@ Box2.Title2 = styled.h3`
 `;
 Box2.Title = styled.h3`
   padding: 20px 5px;
-  /* color: transparent; */
+  position: relative;
   font-family: Monument, sans-serif !important;
 `;
 
-export const BackText = styled.h2`
+export const BackText = styled(motion.h2)`
   font-size: 20rem;
   width: 100%;
-  top: 0;
-  left: 0;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(var(--color), 1);
   color: transparent;
@@ -147,5 +165,36 @@ export const BackText = styled.h2`
   font-weight: 400;
   padding: 0;
   margin: 100px 0;
-  z-index: 0;
+  filter: saturate(4.5);
+  opacity: 0.2;
+  position: relative;
+  transition: transform  1s ease-out;
+  transition-delay: .1s;
+`;
+export const BackText2 = styled(motion.h2)`
+  font-size: 20rem;
+  top: 0;
+  left:0;
+  width: 100%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(var(--bg), 1);
+  color: transparent;
+  text-align: center;
+  letter-spacing: 30px;
+  white-space: nowrap;
+  z-index: 200;
+  user-select: none;
+  font-family: Monument !important;
+  font-weight: 400;
+  padding: 0;
+  margin: 100px 0;
+  position: absolute;
+  mix-blend-mode: difference;
+  transition: transform  .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+`;
+
+export const BackTextCont = styled.div`
+  width: 100%;
+  height: auto;
+  position: relative;
 `;

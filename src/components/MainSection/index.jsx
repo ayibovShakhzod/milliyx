@@ -22,6 +22,7 @@ export default () => {
   useEffect(() => {
     TweenMax.to(app, 0, { css: { visibility: 'visible' } });
     let unmounted = false;
+
     Promise.all([sliders.getSlider(1)]).then(
       ([slider1]) => {
         if (!unmounted) {
