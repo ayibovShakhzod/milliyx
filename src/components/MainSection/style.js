@@ -38,6 +38,7 @@ export const ConSlide1 = styled.div`
   height: 100%;
   position: relative;
   box-sizing: border-box;
+  transform: rotate(15deg) scale(0.8);
 `;
 
 export const Title = styled.h1`

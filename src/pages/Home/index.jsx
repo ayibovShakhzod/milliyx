@@ -20,17 +20,22 @@ import {
   BackTextCont
 } from './style';
 import MainSection from '../../components/MainSection';
-import imgBig from '../../assets/img/img4.jpg';
+import imgBig from '../../assets/img/img14.jpg';
 import img1 from '../../assets/img/img13.jpg';
 import img2 from '../../assets/img/img2.jpg';
 import img3 from '../../assets/img/back2.jpg';
 
 export default () => {
   const { scrollYProgress } = useViewportScroll();
+  const scale1 = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [1, 0]
+  );
   const translateY1 = useTransform(
     scrollYProgress,
     [0, 1],
-    [1, 1.5]
+    [0, 200]
   );
   const translateY2 = useTransform(
     scrollYProgress,
@@ -63,10 +68,10 @@ export default () => {
         <ImgCont>
           <ImgBig
             style={{
-              scale: translateY1,
+              scale: scale1,
+              translateY: translateY1,
               translateX: 0,
               translateZ: 0
-              // scale: '1'
             }}
             src={imgBig}
           />
@@ -77,7 +82,6 @@ export default () => {
           }}
         >
           We create
-          <br />
           experiences
         </Title>
       </Box1>

@@ -38,22 +38,27 @@ export default () => {
   }, []);
 
   return (
-    <SmoothScroll>
+    <>
       <Nav />
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path={`/:${lang}/about`} component={About} />
-        <Route path={`/:${lang}/category`} />
-        <Route path={`/:${lang}/search`} />
-        <Route path={`/:${lang}/news/:id`} />
+      <SmoothScroll>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route
+            path={`/:${lang}/about`}
+            component={About}
+          />
+          <Route path={`/:${lang}/category`} />
+          <Route path={`/:${lang}/search`} />
+          <Route path={`/:${lang}/news/:id`} />
 
-        <Route path="*">
-          <b>404</b>
-          <p>Not found</p>
-        </Route>
-      </Switch>
-    </SmoothScroll>
+          <Route path="*">
+            <b>404</b>
+            <p>Not found</p>
+          </Route>
+        </Switch>
+      </SmoothScroll>
+    </>
   );
 };

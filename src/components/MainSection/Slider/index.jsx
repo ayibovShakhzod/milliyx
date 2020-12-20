@@ -32,11 +32,16 @@ export default ({ slider }) => {
       scale: 1.6,
       ease: Power3.easeInOut,
       delay: -1.4
-    }).from(footer, 1.4, {
-      x: 100,
-      scale: 1.6,
-      ease: Power3.easeInOut
-    }, 0.1);
+    }).from(
+      footer,
+      1.4,
+      {
+        x: 100,
+        scale: 0.8,
+        ease: Power3.easeInOut
+      },
+      0.1
+    );
   }, []);
   const handleActive = (index) => {
     setActiveIndex(index);
@@ -48,9 +53,10 @@ export default ({ slider }) => {
       }}
     >
       <Cover />
-      <Footer ref={(item) => {
-        footer = item;
-      }}
+      <Footer
+        ref={(item) => {
+          footer = item;
+        }}
       >
         <Indicators>
           {[...Array(slider.length)].map((_, index) => (

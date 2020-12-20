@@ -7,9 +7,9 @@ export const ContSlider = styled.div`
   position: relative;
   z-index: 9;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 `;
 export const Cover = styled.div`
   position: absolute;
@@ -51,8 +51,7 @@ export const Img = styled.img`
 `;
 
 export const FrontText = styled.div`
-  background: transparent;
-  color: rgba(var(--color), 1);
+  color: rgba(var(--bg), 1);
   padding: 8px 15px;
   font-size: 1rem;
   transform: rotate(-90deg);
@@ -62,7 +61,8 @@ export const FrontText = styled.div`
   height: 100px;
   width: 120px;
   text-align: center;
-  background-color: rgba(var(--bg), 1);
+  margin-left: auto;
+  background-color: rgba(var(--color), 1);
 `;
 
 export const Title = styled.div`
@@ -79,7 +79,7 @@ export const Title = styled.div`
     opacity: 1;
     position: relative;
     visibility: visible;
-    transform: translate(0) scale(1);
+    transform: translate(0, 65px) scale(1);
   }
 `;
 
@@ -92,12 +92,12 @@ export const Footer = styled.div`
   align-items: center;
   position: relative;
   z-index: 8;
-  color: rgba(var(--bg), 1);
-  background-color: rgba(var(--color), 1);
+  color: rgba(var(--color), 1);
+  background-color: transparent;
 `;
 
 export const Text = styled.div`
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: all 0.5s ease-in-out;
   white-space: nowrap;
   pointer-events: none;
@@ -113,8 +113,8 @@ export const Indicators = styled.ul`
 `;
 
 export const Indicator = styled.li`
-  width: 2px;
-  height: 25px;
+  width: 3px;
+  height: 30px;
   padding: 8px;
   opacity: ${({ active }) => (active ? '1' : '.25')};
   transition: all 0.2s ease;
@@ -125,9 +125,9 @@ export const Indicator = styled.li`
     top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
-    width: 2px;
+    width: 3px;
     height: 90%;
-    background: rgba(var(--bg), 1);
+    background: rgba(var(--color), 1);
   }
   &:hover{
     opacity: ${({ active }) => (active ? '1' : '.35')};;

@@ -9,7 +9,7 @@ export const ContainerHome = styled(Container)`
 `;
 
 export const ImgCont = styled.div`
-  width: 60%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
@@ -24,7 +24,7 @@ export const Box1 = styled.div`
   position: relative;
   display: flex;
   align-items: flex-start;
-  margin: 0 0 100px 0;
+  margin: 100px 0 100px 0;
   /* background-color: rgba(var(--color), 1); */
 `;
 export const ImgBig = styled(motion.img)`
@@ -40,23 +40,23 @@ export const ImgBig = styled(motion.img)`
 export const Title = styled.h2`
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(var(--bg), 1);
+  position: absolute;
   color: transparent;
-  text-align: right;
+  text-align: center;
   letter-spacing: 18px;
   line-height: 150%;
   height: 100%;
-  width: 40%;
-  right: 24px;
+  width: 100%;
+  left: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   z-index: 100;
   user-select: none;
   font-family: Monument, sans-serif !important;
   z-index: 1;
   font-size: 2rem;
   font-weight: 400;
-  background-color: rgba(var(--color), 1);
 `;
 
 export const Box2 = styled.div`
