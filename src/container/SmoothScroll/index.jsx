@@ -30,6 +30,7 @@ export default class SmoothScroll extends React.Component {
   };
 
   render() {
+    document.body.style.height = `${this.state.height}px`;
     return (
       <>
         <div
@@ -37,12 +38,6 @@ export default class SmoothScroll extends React.Component {
           ref={(ref) => (this.viewport = ref)}>
           {this.props.children}
         </div>
-        <div
-          ref={(ref) => (this.fake = ref)}
-          style={{
-            height: this.state.height
-          }}
-        />
       </>
     );
   }

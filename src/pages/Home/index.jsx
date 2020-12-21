@@ -14,10 +14,7 @@ import {
   Box2,
   SubBox1,
   SubBox2,
-  Item,
-  BackText,
-  BackText2,
-  BackTextCont
+  Item
 } from './style';
 import MainSection from '../../components/MainSection';
 import imgBig from '../../assets/img/img14.jpg';
@@ -45,12 +42,7 @@ export default () => {
   const translateY3 = useTransform(
     scrollYProgress,
     [0, 1],
-    [-150, 50]
-  );
-  const translateX1 = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [-5, 50]
+    [-250, 150]
   );
   let box1Title = useRef(null);
   const tl = new TimelineLite({ delay: 0.4 });
@@ -81,57 +73,83 @@ export default () => {
             box1Title = item;
           }}
         >
-          We create
-          experiences
+          We create experiences
         </Title>
       </Box1>
       <Box2>
         <SubBox1>
-          <BackTextCont>
-            <BackText style={{ translateY: translateY3, translateX: translateX1 }}>R</BackText>
-            <BackText2 style={{ translateY: translateY3, translateX: translateX1 }}>R</BackText2>
-          </BackTextCont>
           <Item>
+            <Box2.TextCont>
+              <Box2.Title
+                style={{ translateY: translateY3 }}
+              >
+                Maximum Adaptability
+              </Box2.Title>
+              <Box2.Text
+                style={{ translateY: translateY3 }}
+              >
+                Creative solutions for all types of
+                projects. App, Web, Dashboard, Software
+              </Box2.Text>
+            </Box2.TextCont>
             <Box2.ImgCont>
-              <Box2.Img style={{ translateY: translateY2 }} src={img2} />
-              <Box2.ImgSecond style={{ translateY: translateY2 }} src={img2} />
+              <Box2.Img
+                style={{ translateY: translateY2 }}
+                src={img2}
+              />
+              <Box2.ImgSecond
+                style={{ translateY: translateY2 }}
+                src={img2}
+              />
             </Box2.ImgCont>
-            <Box2.Title>Maximum Adaptability</Box2.Title>
-            <Box2.Text>
-              Creative solutions for all types of projects.
-              App, Web, Dashboard, Software
-            </Box2.Text>
           </Item>
-          <BackTextCont>
-            <BackText style={{ translateY: translateY3, translateX: translateX1 }}>S</BackText>
-            <BackText2 style={{ translateY: translateY3, translateX: translateX1 }}>S</BackText2>
-          </BackTextCont>
         </SubBox1>
         <SubBox2>
           <SubBox2.Item1>
-            <Box2.Title>Responsive design</Box2.Title>
-            <Box2.Text>
-              We get interfaces for any user-friendly device
-            </Box2.Text>
             <Box2.ImgCont>
-              <Box2.Img style={{ translateY: translateY2 }} src={img1} />
-              <Box2.ImgSecond style={{ translateY: translateY2 }} src={img1} />
+              <Box2.Img
+                style={{ translateY: translateY2 }}
+                src={img1}
+              />
+              <Box2.ImgSecond
+                style={{ translateY: translateY2 }}
+                src={img1}
+              />
             </Box2.ImgCont>
+            <Box2.TextCont>
+              <Box2.Title
+                style={{ translateY: translateY3 }}
+              >
+                Responsive design
+              </Box2.Title>
+              <Box2.Text
+                style={{ translateY: translateY3 }}
+              >
+                We get interfaces for any user-friendly
+                device
+              </Box2.Text>
+            </Box2.TextCont>
           </SubBox2.Item1>
-          <BackTextCont>
-            <BackText style={{ translateY: translateY3, translateX: translateX1 }}>M</BackText>
-            <BackText2 style={{ translateY: translateY3, translateX: translateX1 }}>M</BackText2>
-          </BackTextCont>
+        </SubBox2>
+        <SubBox2>
           <SubBox2.Item2>
+            <Box2.TextCont>
+              <Box2.Title>Style</Box2.Title>
+              <Box2.Text>
+                Capture the essence in each project and give
+                it life.
+              </Box2.Text>
+            </Box2.TextCont>
             <Box2.ImgCont>
-              <Box2.Img style={{ translateY: translateY2 }} src={img3} />
-              <Box2.ImgSecond style={{ translateY: translateY2 }} src={img3} />
+              <Box2.Img
+                style={{ translateY: translateY2 }}
+                src={img3}
+              />
+              <Box2.ImgSecond
+                style={{ translateY: translateY2 }}
+                src={img3}
+              />
             </Box2.ImgCont>
-            <Box2.Title>Style</Box2.Title>
-            <Box2.Text>
-              Capture the essence in each project and give
-              it life.
-            </Box2.Text>
           </SubBox2.Item2>
         </SubBox2>
       </Box2>

@@ -64,46 +64,66 @@ export const Box2 = styled.div`
   border-bottom: 1px solid rgba(var(--color), 0.05);
   display: flex;
   padding: 0;
+  flex-direction: column;
   box-sizing: border-box;
 `;
 
 export const SubBox1 = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 0 0 100px 0;
 `;
 export const SubBox2 = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
- align-items: flex-end;
+  align-items: flex-end;
+  padding: 0 0 100px 0;
 `;
 
 export const Item = styled.div`
-  width: 576px;
+  width: 100%;
   transition: all 0.25s ease;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+  justify-content: flex-end;
+`;
+
+Box2.TextCont = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: flex-end;
 `;
 
 SubBox2.Item1 = styled.div`
-  width: 576px;
+  width: 100%;
   transition: all 0.25s ease;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+  justify-content: flex-start;
 `;
 SubBox2.Item2 = styled.div`
-  width: 576px;
+  width: 100%;
   transition: all 0.25s ease;
   position: relative;
   z-index: 1;
-  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+  justify-content: flex-end;
 `;
 Box2.ImgCont = styled.div`
   position: relative;
-  width: 100%;
+  width: 576px;
   height: auto;
   overflow: hidden;
 `;
@@ -131,10 +151,11 @@ Box2.ImgSecond = styled(motion.img)`
 // Box2.Title = styled.h3`
 //   padding: 20px 0;
 // `;
-Box2.Text = styled.p`
+Box2.Text = styled(motion.p)`
   font-size: 0.85rem;
   padding-left: 5px;
   position: relative;
+  transition: transform  .7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 `;
 
 Box2.Title2 = styled.h3`
@@ -144,10 +165,11 @@ Box2.Title2 = styled.h3`
   color: transparent;
   font-family: Monument, sans-serif !important;
 `;
-Box2.Title = styled.h3`
+Box2.Title = styled(motion.h3)`
   padding: 20px 5px;
   position: relative;
   font-family: Monument, sans-serif !important;
+  transition: transform  .7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 `;
 
 export const BackText = styled(motion.h2)`
