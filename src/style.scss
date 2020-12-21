@@ -60,7 +60,7 @@ html {
 }
 
 body::-webkit-scrollbar {
-      width:0;
+      width: 0;
 }
 
 img {
@@ -117,4 +117,75 @@ canvas {
       width: 100vw;
       overflow-x: hidden;
       position: fixed;
+}
+
+.scroll-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      will-change: transform;
+      transition:  all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cursor {
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(var(--color), 1);
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 6000;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 2px 0 rgba(var(--color), 1);
+}
+
+.mouse {
+      width: 4px;
+      height: 4px;
+      background: rgba(var(--color), 1);
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 6000;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease;
+      box-shadow: 0 0 5px 0 rgba(var(--color), 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.icon-hover {
+      transition: all .3s ease;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(.4);
+      position: absolute;
+      color: #fff;
+      pointer-events: none;
+
+}
+
+.icon-active-instagram {
+      border: 1px solid transparent;
+      background: transparent !important;
+      mix-blend-mode: normal !important;
+}
+
+.icon-active-instagram+.cursor {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      mix-blend-mode: exclusion;
+      border: 1px solid transparent;
+}
+
+.icon-active-instagram .iconx-instagram {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
 }
