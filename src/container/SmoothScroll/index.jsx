@@ -22,7 +22,6 @@ export default ({ children }) => {
   // update scrollable height when browser is resizing
   const resizePageHeight = useCallback((entries) => {
     entries.map((entry) => setPageHeight(entry.contentRect.height));
-    document.body.style.height = `${pageHeight}px`;
   }, []);
 
   // observe when browser is resizing
@@ -49,7 +48,7 @@ export default ({ children }) => {
   };
   // easing of smooth scroll
   const spring = useSpring(transform, physics); // apply easing to the negative scroll value
-
+  document.body.style.height = `${pageHeight}px`;
   return (
     <>
       <motion.div
